@@ -1,0 +1,14 @@
+policies:
+  - name: my-first-policy
+    resource: aws.ec2
+    filters:
+      - "tag:Project": absent
+      - "tag:Team": absent
+      - "tag:Env": absent
+      - "tag:Owner": absent
+      - "tag:ManagedBy": absent
+      - "tag:GitUrl": absent
+    actions:
+      - type: mark-for-op
+      - op: stop
+      - days: 5
