@@ -10,5 +10,5 @@ policies:
       - "tag:GitUrl": absent
     actions:
       - type: mark-for-op
-      - op: stop
-      - days: 5
+      	 op: stop
+      	 days: 5
